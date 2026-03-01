@@ -1,10 +1,16 @@
 # Your Project's Title...
-Your project's description...
+Automate Figma 
 
 ## Environments
-- Preview: https://main--{repo}--{owner}.aem.page/
-- Live: https://main--{repo}--{owner}.aem.live/
+Create your content:
+https://da.live/start?org=skkdept&site=adobe-eds-da-figma-dept
+Check your site:
+Preview: https://main--adobe-eds-da-figma-dept--skkdept.aem.page/
 
+Live: https://main--adobe-eds-da-figma-dept--skkdept.aem.live/
+
+Add users:
+Use the admin tool: https://labs.aem.live/tools/user-admin/index.html
 ## Documentation
 
 Before using the aem-boilerplate, we recommand you to go through the documentation on https://www.aem.live/docs/ and more specifically:
