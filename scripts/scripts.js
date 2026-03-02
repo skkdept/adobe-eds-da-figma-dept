@@ -44,6 +44,21 @@ async function loadFonts() {
 }
 
 /**
+ * Moves the fully-decorated promo banner section above the header element.
+ * Must be called after sections are loaded so block CSS/JS are applied.
+ * @param {Element} main The main element
+ */
+function movePromoBanner(main) {
+  const promoSection = main.querySelector('.section.promo-banner-container');
+  if (promoSection) {
+    const header = document.querySelector('header');
+    if (header) {
+      header.before(promoSection);
+    }
+  }
+}
+
+/**
  * Builds all synthetic blocks in a container element.
  * @param {Element} main The container element
  */
@@ -159,6 +174,7 @@ async function loadLazy(doc) {
 
   const main = doc.querySelector('main');
   await loadSections(main);
+  movePromoBanner(main);
 
   const { hash } = window.location;
   const element = hash ? doc.getElementById(hash.substring(1)) : false;

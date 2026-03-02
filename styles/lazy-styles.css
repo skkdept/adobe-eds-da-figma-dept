@@ -1,1 +1,42 @@
 /* add global styles that can be loaded post LCP here */
+
+/* Load More Articles button */
+.load-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 10px 32px;
+  border: 1px solid var(--brand-green);
+  border-radius: 4px;
+  color: var(--brand-green);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.load-more-btn:hover {
+  background-color: var(--brand-green-lighter);
+  color: var(--brand-green);
+  text-decoration: none;
+}
+
+/* Remove excessive section margins for tight layout */
+
+/* Promo banner is moved above header by scripts.js, so no main > prefix */
+.section.promo-banner-container {
+  margin: 0;
+}
+
+main > .section.category-tabs-container {
+  margin: 0;
+}
+
+main > .section.featured-article-container {
+  margin: 24px 0;
+}
+
+main > .section.newsletter-container {
+  margin: 40px 0;
+}
