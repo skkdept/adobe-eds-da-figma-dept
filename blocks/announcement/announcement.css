@@ -1,0 +1,36 @@
+.announcement-wrapper {
+  background-color: var(--turbotax-dark-navy);
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.announcement-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.announcement-text {
+  display: inline;
+}
+
+.announcement-link {
+  color: white;
+  text-decoration: underline;
+  font-weight: 600;
+  margin-left: 4px;
+  transition: color 0.2s ease;
+}
+
+.announcement-link:hover {
+  color: #e0e0e0;
+}
+
+@media (width >= 900px) {
+  .announcement-wrapper {
+    padding: 12px 32px;
+    font-size: 14px;
+  }
+}
