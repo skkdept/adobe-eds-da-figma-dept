@@ -18,6 +18,13 @@
   --text-color: #131313;
   --link-color: #3b63fb;
   --link-hover-color: #1d3ecf;
+  
+  /* TurboTax brand colors */
+  --turbotax-green: #1b9b5b;
+  --turbotax-dark-navy: #1a1a3e;
+  --turbotax-yellow: #ffd900;
+  --turbotax-light-gray: #f5f5f5;
+  --turbotax-text-gray: #5a5a5a;
 
   /* fonts */
   --body-font-family: roboto, roboto-fallback, sans-serif;
@@ -131,19 +138,11 @@ blockquote {
 
 code,
 pre {
-  font-size: var(--body-font-size-s);
-}
-
-pre {
   padding: 16px;
   border-radius: 8px;
   background-color: var(--light-color);
   overflow-x: auto;
   white-space: pre;
-}
-
-main > div {
-  margin: 40px 16px;
 }
 
 input,
@@ -189,6 +188,49 @@ button.button {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+/* sections and blocks */
+main > div {
+  margin: 0;
+}
+
+main > div > div {
+  margin: 0;
+}
+
+/* blog section styling */
+main > div:has(.blog-filters) {
+  background-color: var(--turbotax-light-gray);
+  padding: 0;
+}
+
+main > div:has(.blog) {
+  padding: 48px 16px;
+}
+
+main > div:has(.featured-article) {
+  padding: 48px 16px;
+}
+
+@media (width >= 600px) {
+  main > div:has(.blog) {
+    padding: 48px 24px;
+  }
+
+  main > div:has(.featured-article) {
+    padding: 48px 24px;
+  }
+}
+
+@media (width >= 900px) {
+  main > div:has(.blog) {
+    padding: 48px 32px;
+  }
+
+  main > div:has(.featured-article) {
+    padding: 48px 32px;
+  }
 }
 
 a.button[aria-disabled="true"],
