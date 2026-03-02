@@ -16,15 +16,22 @@
   --light-color: #f8f8f8;
   --dark-color: #505050;
   --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --link-color: #0b8b24;
+  --link-hover-color: #07691a;
   
   /* TurboTax brand colors */
-  --turbotax-green: #1b9b5b;
-  --turbotax-dark-navy: #1a1a3e;
+  --brand-green: #0b8b24;
+  --brand-green-light: #e8f5e9;
+  --brand-green-lighter: #f4faf4;
+  --brand-navy: #1a1a3e;
   --turbotax-yellow: #ffd900;
-  --turbotax-light-gray: #f5f5f5;
-  --turbotax-text-gray: #5a5a5a;
+
+  /* Neutral grays */
+  --gray-100: #f5f5f5;
+  --gray-200: #eee;
+  --gray-300: #ddd;
+  --gray-500: #6b6b6b;
+  --gray-700: #333;
 
   /* fonts */
   --body-font-family: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, roboto-fallback, sans-serif;
@@ -191,9 +198,28 @@ main > div > div {
   margin: 0;
 }
 
+/* category tabs section - flush to header */
+main > div:has(.category-tabs) {
+  padding: 0;
+}
+
+/* featured article section */
+main > div:has(.featured-article) {
+  padding: 32px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* article cards section */
+main > div:has(.article-cards) {
+  padding: 32px 16px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /* blog section styling */
 main > div:has(.blog-filters) {
-  background-color: var(--turbotax-light-gray);
+  background-color: var(--gray-100);
   padding: 0;
 }
 
@@ -201,28 +227,61 @@ main > div:has(.blog) {
   padding: 48px 16px;
 }
 
-main > div:has(.featured-article) {
-  padding: 48px 16px;
-}
-
 @media (width >= 600px) {
-  main > div:has(.blog) {
-    padding: 48px 24px;
+  main > div:has(.featured-article) {
+    padding: 32px 24px;
   }
 
-  main > div:has(.featured-article) {
+  main > div:has(.article-cards) {
+    padding: 32px 24px;
+  }
+
+  main > div:has(.blog) {
     padding: 48px 24px;
   }
 }
 
 @media (width >= 900px) {
-  main > div:has(.blog) {
-    padding: 48px 32px;
-  }
-
   main > div:has(.featured-article) {
     padding: 48px 32px;
   }
+
+  main > div:has(.article-cards) {
+    padding: 48px 32px;
+  }
+
+  main > div:has(.blog) {
+    padding: 48px 32px;
+  }
+}
+
+/* newsletter section - full-width background */
+main > div:has(.newsletter) {
+  background-color: var(--brand-green-lighter);
+  padding: 48px 16px;
+}
+
+@media (width >= 600px) {
+  main > div:has(.newsletter) {
+    padding: 64px 24px;
+  }
+}
+
+/* load more link */
+main > div > p:has(.load-more-btn) {
+  margin: 16px 0 32px;
+}
+
+.load-more-btn {
+  color: var(--brand-green);
+  font-weight: 600;
+  font-size: 15px;
+  text-decoration: none;
+}
+
+.load-more-btn:hover {
+  text-decoration: underline;
+  color: var(--link-hover-color);
 }
 
 a.button[aria-disabled="true"],
@@ -348,6 +407,17 @@ main > .section:first-of-type {
   main > .section > div {
     padding: 0 32px;
   }
+}
+
+/* promo banner section (moved above header by scripts.js) */
+.section.promo-banner-container {
+  margin: 0;
+  padding: 0;
+}
+
+.section.promo-banner-container > div {
+  max-width: 100%;
+  padding: 0;
 }
 
 /* section metadata */

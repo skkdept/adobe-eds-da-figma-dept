@@ -1,115 +1,133 @@
-.featured-article-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
-  padding: 48px 24px;
-}
-
-.featured-article-image {
-  line-height: 0;
-}
-
-.featured-article-image picture {
-  display: block;
-  width: 100%;
-}
-
-.featured-article-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-.featured-article-content {
+.featured-article {
   padding: 0;
 }
 
-.featured-article-content p:first-child {
-  font-size: 12px;
-  font-weight: 600;
-  color: #1b9b5b;
-  letter-spacing: 0.5px;
-  text-transform: uppercase;
-  margin: 0 0 16px;
+.featured-article .featured-article-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
 }
 
-.featured-article-content h1,
-.featured-article-content h2 {
-  font-size: 38px;
+.featured-article .featured-article-image {
+  line-height: 0;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.featured-article .featured-article-image picture {
+  display: block;
+  width: 100%;
+}
+
+.featured-article .featured-article-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.featured-article .featured-article-content {
+  padding: 0;
+}
+
+.featured-article .featured-article-category {
+  display: inline-block;
+  font-size: 11px;
   font-weight: 700;
-  line-height: 1.2;
-  margin: 0 0 24px;
-  color: #1a1a3e;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--brand-green);
+  margin-bottom: 12px;
 }
 
-.featured-article-content p:not(:first-child) {
-  font-size: 17px;
+.featured-article .featured-article-title {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.25;
+  margin: 0 0 16px;
+  color: var(--brand-navy);
+}
+
+.featured-article .featured-article-description {
+  font-size: 15px;
   line-height: 1.6;
-  color: #5a5a5a;
-  margin: 0 0 32px;
+  color: var(--gray-500);
+  margin: 0 0 24px;
 }
 
-.featured-article-content .byline {
+.featured-article .featured-article-byline {
   display: flex;
   align-items: center;
-  gap: 16px;
-  font-size: 14px;
-}
-
-.featured-article-content .author {
-  font-weight: 600;
-  color: #1a1a3e;
-}
-
-.featured-article-content .meta {
-  color: #999;
+  gap: 8px;
   font-size: 13px;
+  margin-bottom: 16px;
 }
 
-.featured-article-content a {
-  color: #1b9b5b;
+.featured-article .featured-article-author {
+  font-weight: 600;
+  color: var(--brand-navy);
+}
+
+.featured-article .featured-article-meta {
+  color: var(--gray-500);
+}
+
+.featured-article .featured-article-meta::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 1em;
+  background: var(--gray-300);
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.featured-article .featured-article-cta {
+  color: var(--brand-green);
   text-decoration: none;
   font-weight: 600;
+  font-size: 15px;
   display: inline-flex;
   align-items: center;
-  gap: 8px;
+  gap: 4px;
 }
 
-.featured-article-content a:hover {
-  color: #158045;
+.featured-article .featured-article-cta:hover {
   text-decoration: underline;
 }
 
-@media (width <= 900px) {
-  .featured-article-wrapper {
-    grid-template-columns: 1fr;
+@media (width >= 600px) {
+  .featured-article .featured-article-inner {
+    flex-direction: row;
     gap: 32px;
-    padding: 32px 24px;
+    align-items: center;
   }
 
-  .featured-article-content h1,
-  .featured-article-content h2 {
+  .featured-article .featured-article-image {
+    flex: 1 1 50%;
+    min-width: 0;
+  }
+
+  .featured-article .featured-article-content {
+    flex: 1 1 50%;
+  }
+
+  .featured-article .featured-article-title {
     font-size: 28px;
-  }
-
-  .featured-article-content p:not(:first-child) {
-    font-size: 15px;
   }
 }
 
-@media (width <= 600px) {
-  .featured-article-wrapper {
-    gap: 24px;
-    padding: 24px 16px;
+@media (width >= 900px) {
+  .featured-article .featured-article-inner {
+    gap: 48px;
   }
 
-  .featured-article-content h1,
-  .featured-article-content h2 {
-    font-size: 22px;
+  .featured-article .featured-article-title {
+    font-size: 32px;
   }
 
-  .featured-article-content p:not(:first-child) {
-    font-size: 14px;
+  .featured-article .featured-article-description {
+    font-size: 16px;
   }
 }

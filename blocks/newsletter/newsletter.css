@@ -1,17 +1,8 @@
-.newsletter-wrapper {
-  background-color: transparent;
-  margin: 0;
-  padding: 0;
-}
-
 .newsletter {
   padding: 48px 24px;
   max-width: 600px;
   margin: 0 auto;
   text-align: center;
-  background-color: var(--brand-green-lighter);
-  border: 1px solid #c8e6c9;
-  border-radius: 8px;
 }
 
 .newsletter .newsletter-heading {
