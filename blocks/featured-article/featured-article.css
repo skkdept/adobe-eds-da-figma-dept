@@ -28,7 +28,9 @@
 }
 
 .featured-article .featured-article-body {
-  padding: 24px 0;
+  padding: 24px;
+  background-color: var(--brand-green-lighter);
+  border-radius: 0 0 12px 12px;
 }
 
 .featured-article .featured-article-category {
